@@ -2,10 +2,38 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Bloc Base Project</title>
+    <title>Computer Vision Trainer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
+	<div class="container-fluid" id="hero">
+		<h1>Computer Vision Trainer</h1>
+		<h2>Training neural networks, one image at a time.</h2>
+		<button class="light">Start</button>
+	</div>
+	<div class="container" id="info">
+		<h3>Help Computers Learn</h3>
+		<p>We allow human operators to review the output of a deep-learning algorithm, correcting errors where applicable. The corrected results are returned into the training set for the neural network, thus improving accuracy over time.</p>
+		<button class="dark">Start</button>
+	</div>
+	<div class="container-fluid" id="footer">
+		<p>About Computer Vision Trainer</p>
+	</div>
+
+
+    <!--JQuery-->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<!-- AngularJS -->
+	 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+	<!--UI Router-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+	<!-- Firebase -->
+	<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+	<!-- AngularFire -->
+	<script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+
     <script src="/scripts/app.js"></script>
 </body>
 </html>
