@@ -23,6 +23,12 @@ var Hapi = require('hapi'),
             path: '/templates/{path*}',
             handler: createDirectoryRoute('templates')
         },
+
+        // staticPages: {
+        //     method: 'GET',
+        //     path: '/{path*}',
+        //     handler: createDirectoryRoute('/')
+        // }
         spa: {
             method: 'GET',
             path: '/{path*}',
