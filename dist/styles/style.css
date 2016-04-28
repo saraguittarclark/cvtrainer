@@ -1,0 +1,82 @@
+/*General Styles*/
+h1, h3 {
+	font-family: 'Lato', sans-serif;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+}
+
+a {
+	text-transform: uppercase;
+	color: #15355A;
+}
+
+.btn-primary {
+	background-color: #15355A;
+	border-color: #15355A;
+}
+
+html {
+	background-color: #EAEAEA;
+}
+
+/*hero-specific styles*/
+
+#hero {
+	background: url('../assets/images/flower-web.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    min-height: 800px;
+    color: white;
+}
+
+#hero h1, h2 {
+	position: relative;
+	text-shadow: 0px 2px 4px #15355A;
+	top: 275px;
+}
+
+#hero a {
+	position: relative;
+	top: 300px;
+}
+
+/*landing page general styles*/
+
+.landing {
+	text-align: center;
+}
+
+.landing p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 2rem;
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+
+/*information section styles*/
+
+#info {
+	padding-top: 30px;
+	color: #15355A;
+}
+
+#info a {
+	margin-bottom: 30px;
+}
+
+/*footer styles*/
+
+#footer {
+	background-color: #D8D8D8;
+	min-height: 100px;
+}
+
+#footer a {
+	position: relative;
+	top: 50px;
+}

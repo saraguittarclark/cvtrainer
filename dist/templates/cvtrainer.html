@@ -1,0 +1,39 @@
+	<div class="container-fluid" id="header">
+		<h1><a ui-sref="landing">Computer Vision Trainer</a></h1>
+	</div>
+
+	<div class="container" id="cv-help-text">
+		<h3>Review AI output</h3>
+		<p>Click on label that best suits the image.</p>
+	</div>
+
+	<div class="container">
+		<ul id="widget">
+			<li ng-repeat="image in cvtrainer.cvTrainerData.images">
+				<div class="row">
+					<div class="col-sm-3 col-xs-12">
+						<img ng-src="{{ image.imageUrl }}"/>
+					</div>
+					<div class="col-sm-2 col-xs-2">
+						<p class="btn btn-default">Horse: {{ image.horse | percent }}</p>
+						<p class="btn btn-default">Man: {{ image.man | percent }}</p>
+						<p class="btn btn-default">Centaur: {{ image.centaur | percent }}</p>
+					</div>
+					<div class="col-sm-7 col-xs-10" id="bars">
+						<div class="confidence-bar">
+							<div class="confidence-bar-fill" ng-style="{ 'width': {{image.horse}} * 100 + '%' }"></div>
+						</div>
+
+						<div class="confidence-bar">
+							<div class="confidence-bar-fill" ng-style="{ 'width': {{image.man}} * 100 + '%' }"></div>
+						</div>
+
+						<div class="confidence-bar">
+							<div class="confidence-bar-fill" ng-style="{ 'width': {{image.centaur}} * 100 + '%' }"></div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
