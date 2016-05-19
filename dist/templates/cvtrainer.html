@@ -8,16 +8,19 @@
 	</div>
 
 	<div class="container">
-		<ul id="widget">
-			<li ng-repeat="image in cvtrainer.cvTrainerData.images">
-				<div class="row">
+		<div class="row">
+			<button class="btn btn-default" id="load" ng-show="currentIndex > 0" ng-click="decrement()">Review Previous</button>
+		</div>
+		<ul>
+			<li ng-repeat="image in cvtrainer.cvTrainerData.images | startFrom: currentIndex">
+				<div class="row" id="widget">
 					<div class="col-sm-3 col-xs-12">
 						<img ng-src="{{ image.imageUrl }}"/>
 					</div>
 					<div class="col-sm-2 col-xs-2">
-						<p class="btn btn-default">Horse: {{ image.horse | percent }}</p>
-						<p class="btn btn-default">Man: {{ image.man | percent }}</p>
-						<p class="btn btn-default">Centaur: {{ image.centaur | percent }}</p>
+						<p class="btn btn-default" data-button="horse" ng-click="clickEvent($event, image)">Horse: {{ image.horse | percent }}</p>
+						<p class="btn btn-default" data-button="man" ng-click="clickEvent($event, image)">Man: {{ image.man | percent }}</p>
+						<p class="btn btn-default" data-button="centaur" ng-click="clickEvent($event, image)">Centaur: {{ image.centaur | percent }}</p>
 					</div>
 					<div class="col-sm-7 col-xs-10" id="bars">
 						<div class="confidence-bar">
