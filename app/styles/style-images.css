@@ -47,22 +47,10 @@ ul li {
 	display: none;
 }
 
-/*#ai-types li {
-	margin: 5px;
-	position: relative;
-	top: 80px;
-}*/
-
 #bars {
 	position: relative;
 	top: 35px;
 }
-
-/*#load {
-	display: none;
-}
-*/
-/*matching/lining up the bars and buttons - check media*/
 
 @media (max-width: 780px) {
 	#widget p.btn {
