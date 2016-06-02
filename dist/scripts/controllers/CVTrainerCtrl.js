@@ -19,3 +19,4 @@
 		.module('cvapp')
 		.controller('CVTrainerCtrl', ['aiData', '$scope', CVTrainerCtrl]);
 })();
+

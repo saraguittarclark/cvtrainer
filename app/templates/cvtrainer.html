@@ -14,25 +14,25 @@
 		<ul>
 			<li ng-repeat="image in cvtrainer.cvTrainerData.images | startFrom: currentIndex">
 				<div class="row" id="widget">
-					<div class="col-sm-3 col-xs-12">
+					<div class="col-md-4 col-sm-12 col-xs-12">
 						<img ng-src="{{ image.imageUrl }}"/>
 					</div>
-					<div class="col-sm-2 col-xs-2">
-						<p class="btn btn-default" data-button="horse" ng-click="clickEvent($event, image)">Horse: {{ image.horse | percent }}</p>
-						<p class="btn btn-default" data-button="man" ng-click="clickEvent($event, image)">Man: {{ image.man | percent }}</p>
-						<p class="btn btn-default" data-button="centaur" ng-click="clickEvent($event, image)">Centaur: {{ image.centaur | percent }}</p>
+					<div class="col-md-2 col-sm-4 col-xs-5">
+						<p class="btn btn-default" data-button="horse" ng-click="clickEvent($event, image)"> {{ image.label1 }}: {{ image.value1 | percent }} </p>
+						<p class="btn btn-default" data-button="man" ng-click="clickEvent($event, image)"> {{ image.label2 }}: {{ image.value2 | percent }}</p>
+						<p class="btn btn-default" data-button="centaur" ng-click="clickEvent($event, image)"> {{ image.label3 }}: {{ image.value3 | percent }}</p>
 					</div>
-					<div class="col-sm-7 col-xs-10" id="bars">
+					<div class="col-md-6 col-sm-8 col-xs-7" id="bars">
 						<div class="confidence-bar">
-							<div class="confidence-bar-fill" ng-style="{ 'width': {{image.horse}} * 100 + '%' }"></div>
+							<div class="confidence-bar-fill" ng-style="{ 'width': {{image.value1}} * 100 + '%' }"></div>
 						</div>
 
 						<div class="confidence-bar">
-							<div class="confidence-bar-fill" ng-style="{ 'width': {{image.man}} * 100 + '%' }"></div>
+							<div class="confidence-bar-fill" ng-style="{ 'width': {{image.value2}} * 100 + '%' }"></div>
 						</div>
 
 						<div class="confidence-bar">
-							<div class="confidence-bar-fill" ng-style="{ 'width': {{image.centaur}} * 100 + '%' }"></div>
+							<div class="confidence-bar-fill" ng-style="{ 'width': {{image.value3}} * 100 + '%' }"></div>
 						</div>
 					</div>
 				</div>
